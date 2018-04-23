@@ -1,0 +1,33 @@
+<h1>Pipes</h1>
+<p>{{cadena}}</p>
+<p>{{cadena | uppercase}}</p>
+<p>{{cadena | lowercase}}</p>
+<p>{{cadena | slice:2}}</p>
+<p>{{cadena | slice:2:4}}</p>
+
+<p>{{numero}}</p>
+<p>{{numero|doble:2:1}}</p>
+<p>{{numero | currency:'EUR'}}</p>
+<p>{{numero | number:'1.0-1'}}</p>
+
+<p>{{fecha}}</p>
+<p>{{fecha |date}}</p>
+<p>{{fecha |date:'dd/MM/yyy'}}</p>
+
+<p>{{cadena|reverse}}</p>
+<p>{{cadena2|ocultar:["no","s"]}}</p>
+
+<!-- pipe puros -->
+<input form="hola" type="text" #input>
+<button id="hola" (click)="addMascota(input.value)">envia</button>
+<ul>
+  <li *ngFor="let mascota of mascotas">{{mascota}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let mascota of mascotas | filtro:'r'">{{mascota}}</li>
+  </ul>
+
+  <!-- Pipe asincrono -->
+  <h1>Pipe asincrono</h1>
+  <p>Mensaje: {{mensaje |async}}</p>

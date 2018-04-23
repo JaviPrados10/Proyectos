@@ -1,0 +1,15 @@
+<h1>String Inporlation</h1>
+<p>cmp-data-binding works!</p>
+<h1>Property binding</h1>
+<input type="text" name="" id="" [value]="nombre">
+<input type="text" [disabled]="dis" #input1 (change)="cambiarNombreCompleto(input1.value)">
+
+<h1>Event binding</h1>
+<button type="button" (click)="habilitarEdicion()">Habilitar la edicion</button>
+
+<input type="checkbox" name="" id="" (click)="habilitarEdicion()"[checked]="dis">
+
+
+<h1>two way data cmp-data-binding</h1>
+<label for="input1">nombre</label><span>{{nombre}}</span>
+<input type="text" name="" id="input1"[(ngModel)]="nombre">

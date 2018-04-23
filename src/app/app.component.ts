@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  mensajePadre;
+  
+  mostrarMensaje(mensaje){
+    console.log(mensaje);
+    this.mensajePadre=mensaje;
+  }
+
 }
+

@@ -1,0 +1,9 @@
+<h2>CMp B</h2>
+<input type="text" #input>
+<button type="button" (click)="guardar(input.value)">Añadir item</button>
+<h3>lista items</h3>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<h3>Mensaje: {{mensaje}}</h3>
